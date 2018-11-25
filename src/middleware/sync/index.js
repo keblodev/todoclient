@@ -77,11 +77,12 @@ export default store => next => action => {
 
             case appActions.EDITING_TODO: {
               const {data, id} = action;
-              axios.post( `${BASE_API_URL}/1/todos/${id}` ,
+              axios.put( `${BASE_API_URL}/1/todos/${id}` ,
               data,
               {
                 headers: {
-                  "Authorization": `Bearer ${AUTH_TOKEN}`
+                  "Authorization": `Bearer ${AUTH_TOKEN}`,
+                  "Content-Type": "application/json"
                 }
               })
               .then( response => {
@@ -96,11 +97,12 @@ export default store => next => action => {
               const areAllMarked = state.app
                 .todos.every(todo => todo.isCompleted);
 
-              axios.post( `${BASE_API_URL}/1/todos` ,
+              axios.put( `${BASE_API_URL}/1/todos` ,
               {isCompleted: !areAllMarked},
               {
                 headers: {
-                  "Authorization": `Bearer ${AUTH_TOKEN}`
+                  "Authorization": `Bearer ${AUTH_TOKEN}`,
+                  "Content-Type": "application/json"
                 }
               })
               .then( response => {
