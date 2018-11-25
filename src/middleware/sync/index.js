@@ -33,9 +33,42 @@ export default store => next => action => {
                 }
               })
               .then( response => {
+                console.log(response);
+                dispatch(actions.todosGot( response.data ));
+              });
+
+              break;
+            }
+
+            case appActions.DELETING_TODO: {
+              const {id} = action;
+              axios.delete( `${BASE_API_URL}/1/todos/${id}` ,
+              {
+                headers: {
+                  "Authorization": `Bearer ${AUTH_TOKEN}`
+                }
+              })
+              .then( response => {
 
                 console.log(response);
-                dispatch(actions.todosFetch( response.data ));
+                dispatch(actions.todoDelete( id ));
+              });
+
+              break;
+            }
+
+            case appActions.EDITING_TODO: {
+              const {text, id} = action;
+              axios.put( `${BASE_API_URL}/1/todos/${id}` ,
+              {text},
+              {
+                headers: {
+                  "Authorization": `Bearer ${AUTH_TOKEN}`
+                }
+              })
+              .then( response => {
+                console.log(response);
+                dispatch(actions.todoEdit({...response.data}));
               });
 
               break;

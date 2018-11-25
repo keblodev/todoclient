@@ -17,7 +17,7 @@ describe('todo actions', () => {
   })
 
   it('editTodo should create EDIT_TODO action', () => {
-    expect(actions.editTodo(1, 'Use Redux everywhere')).toEqual({
+    expect(actions.editTodo({id:1, text:'Use Redux everywhere'})).toEqual({
       type: types.EDIT_TODO,
       id: 1,
       text: 'Use Redux everywhere'
