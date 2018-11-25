@@ -11,13 +11,13 @@ export default store => next => action => {
 
         switch(action.type) {
             case appActions.POST_TODO: {
-              axios.post( `${BASE_API_URL}/1/todos/new`,
+              axios.post( `${BASE_API_URL}/1/todos`,
               { text: action.text }, {
                 headers: {
                   "Authorization": `Bearer ${AUTH_TOKEN}`,
                   "Content-Type": "application/json"
                 }
-              } )
+              })
               .then( response => {
                 console.log(response);
                 dispatch(actions.todoAdd( response.data ));
@@ -94,6 +94,9 @@ export default store => next => action => {
             }
 
             case appActions.COMPLETE_ALL_TODOS: {
+
+              dispatch({ type: appActions.OPTIMIST_COMPLETE_ALL_TODOS })
+
               const areAllMarked = state.app
                 .todos.every(todo => todo.isCompleted);
 

@@ -29,12 +29,26 @@ export default function todos(state = initialState, action) {
         todo.id !== action.id
       )
 
+    case appActions.EDITING_TODO:
+      return state.map(todo =>
+        todo.id === action.id ?
+          { ...todo, ...action.data } :
+          todo
+      )
+
     case appActions.TODO_UPDATED:
       return state.map(todo =>
         todo.id === action.data.id ?
           { ...todo, ...action.data } :
           todo
       )
+
+    case appActions.OPTIMIST_COMPLETE_ALL_TODOS:
+      const areAllMarked = state.every(todo => todo.isCompleted)
+      return state.map(todo => ({
+        ...todo,
+        isCompleted: !areAllMarked
+      }))
 
     default:
       return state
