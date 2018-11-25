@@ -11,9 +11,9 @@ export const getVisibleTodos = createSelector(
       case SHOW_ALL:
         return todos
       case SHOW_COMPLETED:
-        return todos.filter(t => t.completed)
+        return todos.filter(t => t.isCompleted)
       case SHOW_ACTIVE:
-        return todos.filter(t => !t.completed)
+        return todos.filter(t => !t.isCompleted)
       default:
         throw new Error('Unknown filter: ' + visibilityFilter)
     }
@@ -24,7 +24,7 @@ export const getCompletedTodoCount = createSelector(
   [getTodos],
   todos => (
     todos.reduce((count, todo) =>
-      todo.completed ? count + 1 : count,
+      todo.isCompleted ? count + 1 : count,
       0
     )
   )

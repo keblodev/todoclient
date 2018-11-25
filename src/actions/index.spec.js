@@ -16,18 +16,19 @@ describe('todo actions', () => {
     })
   })
 
-  it('editTodo should create EDIT_TODO action', () => {
-    expect(actions.editTodo({id:1, text:'Use Redux everywhere'})).toEqual({
-      type: types.EDIT_TODO,
+  it('editTodo should create TODO_UPDATED action', () => {
+    expect(actions.updateTodo({id:1, text:'Use Redux everywhere'})).toEqual({
+      type: types.TODO_UPDATED,
       id: 1,
       text: 'Use Redux everywhere'
     })
   })
 
-  it('completeTodo should create COMPLETE_TODO action', () => {
-    expect(actions.completeTodo(1)).toEqual({
-      type: types.COMPLETE_TODO,
-      id: 1
+  it('completeTodo should create TOGGLE_COMPLETE_TODO action', () => {
+    expect(actions.updateTodo({id: 1, isCompleted: true})).toEqual({
+      type: types.TOGGLE_COMPLETE_TODO,
+      id: 1,
+      data: {isCompleted: true}
     })
   })
 

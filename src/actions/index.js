@@ -1,13 +1,13 @@
 import * as appActions from '../constants/ActionTypes'
 
-export const completeTodo = id => ({ type: appActions.COMPLETE_TODO, id })
-export const completeAllTodos = () => ({ type: appActions.COMPLETE_ALL_TODOS })
-export const clearCompleted = () => ({ type: appActions.CLEAR_COMPLETED })
 export const setVisibilityFilter = filter => ({ type: appActions.SET_VISIBILITY_FILTER, filter})
 
+export const completeAllTodos = () => ({ type: appActions.COMPLETE_ALL_TODOS });
 
-export const todoEdit = ({text, id}) => ({ type: appActions.EDIT_TODO, text, id });
-export const editTodo = ({text, id}) => ( { type: appActions.EDITING_TODO, text, id });
+export const clearCompleted = () => ({ type: appActions.DELETING_TODOS });
+
+export const todoEdit = data => ({ type: appActions.TODO_UPDATED, data });
+export const updateTodo = ({id, ...data}) => ( { type: appActions.EDITING_TODO, data, id });
 
 export const todosGot = data => ({ type: appActions.GOT_TODOS, data });
 export const getTodos = () => ({ type: appActions.GET_TODOS });

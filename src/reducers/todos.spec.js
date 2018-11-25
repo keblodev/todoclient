@@ -112,7 +112,7 @@ describe('todos reducer', () => {
     ])
   })
 
-  it('should handle EDIT_TODO', () => {
+  it('should handle TODO_UPDATED', () => {
     expect(
       todos([
         {
@@ -125,7 +125,7 @@ describe('todos reducer', () => {
           id: 0
         }
       ], {
-        type: types.EDIT_TODO,
+        type: types.TODO_UPDATED,
         text: 'Fix the tests',
         id: 1
       })
@@ -142,7 +142,7 @@ describe('todos reducer', () => {
     ])
   })
 
-  it('should handle COMPLETE_TODO', () => {
+  it('should handle TOGGLE_COMPLETE_TODO', () => {
     expect(
       todos([
         {
@@ -155,7 +155,7 @@ describe('todos reducer', () => {
           id: 0
         }
       ], {
-        type: types.COMPLETE_TODO,
+        type: types.TOGGLE_COMPLETE_TODO,
         id: 1
       })
     ).toEqual([
@@ -254,7 +254,7 @@ describe('todos reducer', () => {
     expect(
       [
         {
-          type: types.COMPLETE_TODO,
+          type: types.TOGGLE_COMPLETE_TODO,
           id: 0
         }, {
           type: types.CLEAR_COMPLETED
