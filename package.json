@@ -23,7 +23,7 @@
   },
   "scripts": {
     "dev": "react-scripts start",
-    "start": "npm run build && serve -p 3000 build -s -c 1",
+    "start": "serve -p 3000 build -s -c 1",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "test": "react-scripts test --env=node"
