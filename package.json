@@ -18,12 +18,12 @@
     "redux-localstorage": "^0.4.1",
     "redux-thunk": "^2.3.0",
     "reselect": "^3.0.1",
-    "serve": "^10.1.1",
+    "serve": "6.5.7",
     "todomvc-app-css": "^2.1.1"
   },
   "scripts": {
     "dev": "react-scripts start",
-    "start": "serve -p 3000 build -s -c 1",
+    "start": "serve -v && serve -p 3000 build -s -c 1",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "test": "react-scripts test --env=node"
