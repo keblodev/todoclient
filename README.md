@@ -59,3 +59,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ## Docs to read:
   - https://docs.kintohub.com/docs/mongo-db
   - HKJS meetup slides: https://slides.com/romanfromrome/microservices-your-react-todo-app
+  - HKJS video: https://www.youtube.com/watch?v=R8-n2tPtS18
