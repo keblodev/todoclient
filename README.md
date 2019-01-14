@@ -20,7 +20,7 @@
  2. `npm install`
  3. `npm start`
  
-## To run locally:
+## To run remote:
  1. Make sure you've set REMOTE_OVERRIDE_CONNECTION_STRING in your deployment env
  2. `npm install && npm build`
  3. `npm start` 
