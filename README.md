@@ -19,6 +19,11 @@
  1. Make sure https://github.com/ronanamsterdam/todolist is running locally and has MongoDb connection
  2. `npm install`
  3. `npm start`
+ 
+## To run locally:
+ 1. Make sure you've set REMOTE_OVERRIDE_CONNECTION_STRING in your deployment env
+ 2. `npm install && npm build`
+ 3. `npm start` 
 
 ## Available Scripts
 
