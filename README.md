@@ -22,7 +22,7 @@
  
 ## To run remote:
  1. Make sure you've set REMOTE_OVERRIDE_CONNECTION_STRING in your deployment env
- 2. `npm install && npm build`
+ 2. `npm install && npm run build`
  3. `npm start` 
 
 ## Available Scripts
@@ -50,16 +50,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Docs to read:
   - https://docs.kintohub.com/docs/mongo-db
