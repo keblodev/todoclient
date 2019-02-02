@@ -2,6 +2,8 @@
 
 - Sample React shocasing deployment of a complete web-facing microservice like app on KintoHub (https://www.kintohub.com/) 
 
+- check it here -> https://todoclient-default-todolistdpl.web.kintohub.com/
+
 - Forked and modified from: https://github.com/reduxjs/redux/tree/master/examples/todomvc
 
 - under the hood: 
