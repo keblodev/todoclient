@@ -18,7 +18,7 @@
     "redux-localstorage": "^0.4.1",
     "redux-thunk": "^2.3.0",
     "reselect": "^3.0.1",
-    "serve": "6.5.7",
+    "serve": "10.1.2",
     "todomvc-app-css": "^2.1.1"
   },
   "scripts": {
